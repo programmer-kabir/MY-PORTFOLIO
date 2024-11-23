@@ -20,7 +20,7 @@ import {
   SiAdobephotoshop,
   SiAdobeillustrator,
 } from "react-icons/si";
-
+import { BiLogoRedux } from "react-icons/bi";
 const Skills = () => {
   const [openTab, setOpenTab] = useState(1);
   const handleTabSelect = (tabNumber) => {
@@ -40,6 +40,7 @@ const Skills = () => {
     { icon: <SiNodedotjs />, name: "Node.js", brandColor: "#339933" },
     { icon: <SiMongodb />, name: "MongoDB", brandColor: "#47A248" },
     { icon: <TbBrandNextjs />, name: "Next.js", brandColor: "#0070F3" },
+    { icon: <BiLogoRedux />, name: "Redux", brandColor: "#764abc" },
   ];
 
   const toolSkills = [

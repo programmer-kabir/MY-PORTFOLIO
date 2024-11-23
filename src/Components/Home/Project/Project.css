@@ -1,32 +1,38 @@
- .containerr {
-    height: 200px;
-    overflow: hidden;
-    width: auto;
+.containerr {
+  height: 460px;
+  overflow: hidden;
+  width: auto;
+}
+@media (max-width: 650px) {
+  .containerr {
+    height: 200px; /* Example height adjustment for smaller screens */
+    width: 100%;   /* Make the container take full width */
+    overflow: auto; /* Enable scrolling if the content overflows */
   }
+}
+.box {
+  height: 100%;
+  position: relative;
+}
 
-  .box {
-    height: 100%;
-    position: relative;
+.box:hover .box-img {
+  animation: scrollAnimation 8s infinite linear;
+}
+
+@keyframes scrollAnimation {
+  0% {
+    transform: translateY(0);
   }
-  
-  .box:hover .box-img {
-    animation: scrollAnimation 8s infinite linear;
+  100% {
+    transform: translateY(-100%);
   }
-  
-  @keyframes scrollAnimation {
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(-100%);
-    }
-  }
-  
-  .box-img {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+}
+
+.box-img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 

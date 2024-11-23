@@ -46,14 +46,14 @@ const Contact = () => {
       <section id="contact" className="pt-16 pb-10">
         <div data-aos="fade-up"
      data-aos-duration="3000">
-          <div className="text-center px-6">
+          <div className="text-center ">
             <h2 className="text-4xl font-bold text-[#A362FF] text-center ">
               Contact <span className="text-white">ME!!</span>{" "}
             </h2>
 
             <div
               className="mt-5 flex md:flex-row flex-col-reverse
-           gap-6 md:px-11 px-5 py-3 md:py-5 bg-gray-800 rounded-lg mx-auto"
+           gap-6  md:px-5 px-2 py-3 md:py-5 bg-gray-800 rounded-lg mx-auto"
             >
               <form
                 ref={form}
@@ -103,13 +103,13 @@ const Contact = () => {
                 </div>
                 <div className="flex flex-col gap-7">
                   <div className="flex items-center md:text-lg text-white gap-3 text-sm  break-words">
-                    <span className="min-w-[3.5rem]  text-3xl min-h-[3.5rem] flex items-center justify-center text-white bg-blue-500 rounded-full">
+                    <span className="md:min-w-[3.5rem] min-w-[2.5rem] md:text-3xl text-xl  min-h-[2.5rem] md:min-h-[3.5rem] flex items-center justify-center text-white bg-blue-500 rounded-full">
                       <svg
                         aria-hidden="true"
                         focusable="false"
                         data-prefix="fas"
                         data-icon="envelope"
-                        className="svg-inline--fa fa-envelope text-white w-7 h-7 font-semibold"
+                        className="svg-inline--fa fa-envelope text-white md:w-7 md:h-7 w-5 h-5 font-semibold"
                         role="img"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 512 512"
@@ -123,13 +123,13 @@ const Contact = () => {
                     programmerkabirr@gmail.com
                   </div>
                   <div className="flex items-center md:text-lg text-white gap-3 text-sm  break-words">
-                    <span className="min-w-[3.5rem]  text-3xl min-h-[3.5rem] flex items-center justify-center text-white bg-blue-500 rounded-full ">
+                    <span className="md:min-w-[3.5rem] min-w-[2.5rem] md:text-3xl text-xl  min-h-[2.5rem] flex items-center justify-center text-white bg-blue-500 rounded-full ">
                       <svg
                         aria-hidden="true"
                         focusable="false"
                         data-prefix="fas"
                         data-icon="phone"
-                        className="svg-inline--fa fa-phone text-white w-7 h-7"
+                        className="svg-inline--fa fa-phone text-white md:w-7 md:h-7 w-5 h-5"
                         role="img"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 512 512"
@@ -144,13 +144,13 @@ const Contact = () => {
                   </div>
 
                   <div className="flex items-center md:text-lg text-white gap-3 text-sm  break-words">
-                    <span className="min-w-[3.5rem]  text-3xl min-h-[3.5rem] flex items-center justify-center text-white bg-blue-500 rounded-full">
+                    <span className="md:min-w-[3.5rem] min-w-[2.5rem] md:text-3xl text-xl  min-h-[2.5rem] flex items-center justify-center text-white bg-blue-500 rounded-full">
                       <svg
                         aria-hidden="true"
                         focusable="false"
                         data-prefix="fas"
                         data-icon="location-dot"
-                        className="svg-inline--fa w-7 h-7 fa-location-dot text-white"
+                        className="svg-inline--fa md:w-7 md:h-7 w-5 h-5 fa-location-dot text-white"
                         role="img"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 384 512"

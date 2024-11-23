@@ -1,161 +1,175 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Project.css";
 import Content from "../../Content/Content";
+import { FaRegEye } from "react-icons/fa";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Tooltip as ReactTooltip } from "react-tooltip";
+import { IoIosLink } from "react-icons/io";
+import "react-tooltip/dist/react-tooltip.css";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-cards";
+import { EffectCards, Pagination } from "swiper/modules";
+import {
+  SiAntdesign,
+  SiExpress,
+  SiFirebase,
+  SiGithub,
+  SiJavascript,
+  SiMongodb,
+  SiNodedotjs,
+  SiReact,
+  SiTailwindcss,
+  SiVercel,
+} from "react-icons/si";
+import { BiLogoRedux } from "react-icons/bi";
+import { Link } from "react-router-dom";
 const Project = () => {
-  const [selectedFilter, setSelectedFilter] = useState("all");
-  const [showDetails, setShowDetails] = useState("");
+  const [projects, setProjects] = useState([]);
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const response = await fetch("/project.json");
+        const data = await response.json();
+        setProjects(data);
+      } catch (error) {
+        console.error("Error fetching project data:", error);
+      }
+    };
 
-  const projectCategories = [
-    {
-      text: "All",
-      filterValue: "all",
-      isSelected: selectedFilter === "all",
-    },
-    {
-      text: "School Management",
-      filterValue: "school",
-      isSelected: selectedFilter === "school",
-    },
-    {
-      text: "E-commerce",
-      filterValue: "e-commerce",
-      isSelected: selectedFilter === "e-commerce",
-    },
-  ];
-
-  const projects = [
-    {
-      id: 1,
-      title: "ToyBattleZone",
-      image: "https://i.ibb.co/kGMJvJD/project-3.png",
-      category: "e-commerce",
-      liveLink: "https://assinment-11-39422.web.app/",
-      Client_Side_github_link:
-        "https://github.com/programmer-kabir/Toy-MarketPlace-clinet",
-      Server_Side_github_link:
-        "https://github.com/programmer-kabir/toy-marketplace-server",
-    },
-    {
-      id: 2,
-      title: "Programming Course",
-      image: "https://i.ibb.co/b6rjJCY/project-2.png",
-      category: "school",
-      liveLink: "https://learning-english-2be52.web.app/",
-      Client_Side_github_link:
-        "https://github.com/programmer-kabir/Course-website-client",
-      Server_Side_github_link:
-        "https://github.com/programmer-kabir/Course-website-server",
-    },
-    {
-      id: 3,
-      title: "Doctors Booking",
-      image:
-        "https://i.ibb.co/tY9212Y/screencapture-localhost-5173-2023-07-31-21-03-44.png",
-      category: "e-commerce",
-      liveLink: "https://bokking-5b345.web.app/",
-      Client_Side_github_link:
-        "https://github.com/programmer-kabir/Doctor-Booking-Client-Siide",
-      Server_Side_github_link:
-        "https://github.com/programmer-kabir/Doctor-Booking-Back-Side",
-    },
-  ];
-
-  const filterProjects = (category) => {
-    setSelectedFilter(category);
+    fetchProjects();
+  }, []);
+  const iconMapping = {
+    SiJavascript,
+    SiReact,
+    SiTailwindcss,
+    SiFirebase,
+    SiExpress,
+    SiNodedotjs,
+    SiMongodb,
+    BiLogoRedux,
+    SiAntdesign,
+    SiVercel,
   };
-
-  const filteredProjects =
-    selectedFilter === "all"
-      ? projects
-      : projects.filter((project) => project.category === selectedFilter);
-
   return (
     <Content>
-      <section id="projects" className="pt-16 overflow-x-hidden">
-      <div data-aos="fade-down">
-        <div className="">
-          <h2 className="text-4xl font-bold text-[#A362FF] text-center py-5 ">
-            My <span className="text-white">Projects!!</span>{" "}
-          </h2>
-
-          <div className="flex gap-2 justify-center items-center pt-2 mb-8">
-            {projectCategories.map((button, index) => (
-              <button
-                key={index}
-                
-                className={` rounded-full  ${
-                  button.isSelected
-                    ? "selectButton text-white"
-                    : " inline-block normal-btn"
-                }`}
-                onClick={() => filterProjects(button.filterValue)}
-              >
-                {button.text}
-              </button>
-            ))}
+      <section id="projects" className="pt-16 overflow-hidden">
+        <div data-aos="fade-down ">
+          <div className="">
+            <h2 className="text-4xl font-bold text-[#A362FF] text-center py-5 ">
+              My <span className="text-white">Projects!!</span>{" "}
+            </h2>
           </div>
+          {/*  */}
+          <Swiper
+            effect={"cards"}
+            pagination={{
+              clickable: true,
+            }}
+            grabCursor={true}
+            modules={[EffectCards, Pagination]}
+            className="mySwiper mt-5"
+          >
+            {projects.map((project) => (
+              <SwiperSlide className="" key={project.id}>
+                <section className="md:flex gap-5 max-w-4xl rounded-xl mx-auto bg-[#242F48] p-4 py-3  md:p-10">
+                  <div className="md:w-1/2 ">
+                    <div className="flex items-center justify-between gap-5">
+                      <h2 className="md:text-3xl text-xl font-semibold text-white">
+                        {project.title}
+                      </h2>
+                      <Link to={`/projects/details/${project.id}`}>
+  <button className="md:selectButton selectSmallButton">Details</button>
+</Link>
+                    </div>
+                    {/* overview */}
+                    <h4 className="pt-7 md:font-medium font-normal text-justify text-white text-lg">
+                      {project?.overview}
+                    </h4>
+                    {/* Technology */}
+                    <div className="pt-7">
+                      <h2 className="text-2xl font-semibold text-white">
+                        Technologies
+                      </h2>
+                      <div className="grid grid-cols-4 md:grid-cols-7 gap-4 pt-5">
+                        {project.technology.map((technologys, index) => {
+                          const IconComponent = iconMapping[technologys.icon]; // Find the correct icon component
+                          return (
+                            <div key={index}>
+                              <div
+                                style={{
+                                  color: technologys?.brandColor || "#fff",
+                                }}
+                                className="md:text-4xl text-3xl"
+                              >
+                                <div>
+                                  <a
+                                    data-tooltip-id="my-tooltip"
+                                    data-tooltip-content={technologys?.name}
+                                  >
+                                    {IconComponent && <IconComponent />}{" "}
+                                    {/* Render the icon component */}
+                                  </a>
+                                  <ReactTooltip
+                                    id="my-tooltip"
+                                    style={{
+                                      fontSize: "12px",
+                                      padding: "0px 10px",
+                                    }}
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
 
-          <div className="grid gap-5 grid-cols-1 lg:grid-cols-3 pt-3 mx-auto">
-            {filteredProjects.map((project_info, index) => (
-              <div
-                className="h-fit p-4 bg-slate-700 rounded-xl overflow-x-auto"
-                key={index}
-                data-aos="zoom-out-down"
-              >
-                <div className="containerr">
-                  <div className="box box-1 rounded-lg overflow-hidden ">
-                    <img
-                      src={project_info.image}
-                      className="box-img rounded-lg"
-                      alt=""
-                    />
+                      <div className="flex items-center gap-4 pt-7 pb-5 md:mb-0">
+                        <a
+                          href={project.liveLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <button className="flex items-center md:gap-2 text-white selectSmallButton md:selectButton">
+                            <IoIosLink size={25} />
+                            <span className="md:text-xl text-xs font-semibold">
+                              Live Link
+                            </span>
+                          </button>
+                        </a>
+                        <a
+                          href={project.github_link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <button className="flex items-center md:gap-2  text-white selectSmallButton">
+                            <SiGithub size={25} />
+                            <span className="md:text-xl  text-xs font-semibold">
+                              Github Repository
+                            </span>
+                          </button>
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <h3 className="text-xl my-2">{project_info.title}</h3>
-                <div className="flex justify-between">
-                  <button
-                    href={project_info.liveLink}
-                    target="_blank"
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded perspective hover:perspective-none transform hover:rotate-x-12 transition duration-300"
-                  >
-                    Live Site
-                  </button>
-
-                  <button
-                    href={project_info.Client_Side_github_link}
-                    target="_blank"
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded perspective hover:perspective-none transform hover:rotate-x-12 transition duration-300"
-                  >
-                    Client Side
-                  </button>
-                  <button
-                    disabled={!project_info.Server_Side_github_link}
-                    className={`${
-                      project_info.Server_Side_github_link
-                        ? "bg-blue-500 hover:bg-blue-700"
-                        : "bg-gray-500"
-                    } text-white font-bold py-2 px-3 rounded perspective hover:perspective-none transform hover:rotate-x-12 transition duration-300`}
-                  >
-                    {project_info.Server_Side_github_link ? (
-                      <a
-                        href={project_info.Server_Side_github_link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-white"
-                      >
-                        Server Side
-                      </a>
-                    ) : (
-                      "Server Side"
-                    )}
-                  </button>
-                </div>
-              </div>
+                  <div className="md:w-1/2">
+                    <div className="containerr md:pl-10">
+                      <div className="box box-1 rounded-lg overflow-hidden ">
+                        <img
+                          src={project.mainImage}
+                          className="box-img rounded-lg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </SwiperSlide>
             ))}
-          </div>
+          </Swiper>
         </div>
-      </div>
-    </section>
+      </section>
     </Content>
   );
 };
