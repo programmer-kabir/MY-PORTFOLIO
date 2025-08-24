@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "title": "Trends Shop",
+    "category": "E-commerce",
+    "technology": [
+      { "icon": "SiJavascript", "name": "Javascript", "brandColor": "#FFFF00" },
+      { "icon": "SiReact", "name": "React.js", "brandColor": "#61DBFB" },
+      {
+        "icon": "SiTailwindcss",
+        "name": "Tailwind CSS",
+        "brandColor": "#38B2AC"
+      },
+      { "icon": "SiFirebase", "name": "Firebase", "brandColor": "#FFCB2B" },
+      { "icon": "SiExpress", "name": "Express.js", "brandColor": "#61DAFB" },
+      { "icon": "SiNodedotjs", "name": "Node.js", "brandColor": "#339933" },
+      { "icon": "SiMongodb", "name": "MongoDB", "brandColor": "#47A248" },
+      { "icon": "SiAntdesign", "name": "Ant Design", "brandColor": "#0170FE" },
+
+      { "icon": "BiLogoRedux", "name": "Redux", "brandColor": "#764abc" },
+      { "icon": "SiAntdesign", "name": "Ant Design", "brandColor": "#0170FE" },
+      { "icon": "SiVercel", "name": "Vercel", "brandColor": "#fff" }
+    ],
+    "overview": "Discover an elegant shoe e-commerce platform built with React, Ant Design, MongoDB, Mongoose, and Redux, offering a flawless shopping journey alongside robust dashboard management and secure payment features.",
+    "details": "Trends Shop is a premium shoe eCommerce platform crafted to deliver a contemporary shopping experience. The site features a sleek and responsive user interface powered by React and Ant Design, highlighting an extensive collection of leather products. Its MongoDB-based backend ensures seamless management of customer orders, product inventories, and payment details. Administrators benefit from a powerful dashboard for overseeing inventory and orders, while customers enjoy conveniences like secure payments, order tracking, and an effortless shopping experience. Upcoming updates will include AI-driven product recommendations and advanced search functionality to elevate the user experience further.",
+    "mainImage": "https://i.ibb.co.com/Cv21hJX/screencapture-trends-shop-5f3a7-web-app-2024-11-23-11-39-03.png",
+    "othersImage": [
+      {
+        "name": "Home Page",
+        "image": "https://i.ibb.co.com/k6LWftN/NavMenu.png"
+      },
+      {
+        "name": "Filter Page",
+        "image": "https://i.ibb.co.com/gMHkTDC/Shoe.png"
+      },
+      {
+        "name": "Admin Dashboard",
+        "image": "https://i.ibb.co.com/Lv3CBKh/Admin-Sales-Pages.png"
+      },
+      {
+        "name": "Coupon Code",
+        "image": "https://i.ibb.co.com/NstYTnp/Coupon-Code-Manges.png"
+      },
+      {
+        "name": "Users Full Details",
+        "image": "https://i.ibb.co.com/55jZNvh/User-Data.png"
+      },
+      {
+        "name": "Users Order Management",
+        "image": "https://i.ibb.co.com/Bc2kc3H/User-Order-Mange-Ment.png"
+      },
+      {
+        "name": "Users Add to Card Data",
+        "image": "https://i.ibb.co.com/YX0pLwJ/Product-Add-Data.png"
+      }
+    ],
+    "keyfeature": [
+      "Product catalog and filtering",
+      "User authentication and order tracking",
+      "Payment gateway integration",
+      "Responsive and optimized UI"
+    ],
+    "starDate": "25 Oct, 2024",
+    "endDate": "7 Nov, 2024",
+    "liveLink": "https://trends-shop-5f3a7.web.app/",
+    "github_link": "https://github.com/programmer-kabir/Trends-Shop"
+  },
+  {
+    "id": 2,
+    "title": "Blogs Editor",
+    "category": "Social Media",
+    "technology": [
+      { "icon": "SiJavascript", "name": "Javascript", "brandColor": "#FFFF00" },
+      { "icon": "SiReact", "name": "React.js", "brandColor": "#61DBFB" },
+      {
+        "icon": "SiTailwindcss",
+        "name": "Tailwind CSS",
+        "brandColor": "#38B2AC"
+      },
+      { "icon": "SiFirebase", "name": "Firebase", "brandColor": "#FFCB2B" },
+      { "icon": "SiExpress", "name": "Express.js", "brandColor": "#61DAFB" },
+      { "icon": "SiNodedotjs", "name": "Node.js", "brandColor": "#339933" },
+      { "icon": "SiMongodb", "name": "MongoDB", "brandColor": "#47A248" },
+      { "icon": "BiLogoRedux", "name": "Redux", "brandColor": "#764abc" },
+      { "icon": "SiVercel", "name": "Vercel", "brandColor": "#fff" }
+    ],
+    "overview": "A blog-sharing platform that allows users to sign up, create, and manage their blogs, while admins and superadmins monitor and control the content. Readers can engage with posts through comments, likes, and shares.",
+    "details": "Blogs Editor is an easy-to-use blogging platform where users can create and share blogs, while readers can interact by commenting and liking posts. Built with Next.js, Tailwind CSS, and PostgreSQL, the app offers a smooth experience with a focus on high user engagement. Admins can review and manage content to keep the community friendly and on-topic. Blog Plex uses Prisma to handle the database efficiently, and its responsive design makes it accessible on any device. Future updates will include advanced analytics and personalized content suggestions to keep users engaged.",
+    "mainImage": "https://i.ibb.co.com/rbMh4CX/screencapture-blog-editorr-web-app-2024-11-24-00-33-49.png",
+    "othersImage": [
+      {
+        "name": "Home Page",
+        "image": "https://i.ibb.co.com/Zh2QKZH/home-page.png"
+      },
+      {
+        "name": "Filter Page",
+        "image": "https://i.ibb.co.com/4PNWVRk/Filter-page.png"
+      },
+      {
+        "name": "Admin Dashboard",
+        "image": "https://i.ibb.co.com/CQYVnZ3/Admin-Board.png"
+      },
+      {
+        "name": "Admin Blog Management",
+        "image": "https://i.ibb.co.com/FgHMbc5/Blogs-Show.png"
+      },
+      {
+        "name": "Add Blog Page",
+        "image": "https://i.ibb.co.com/DpYH1Dg/Bloggers-Add-Page.png"
+      },
+      {
+        "name": "Blogger Blog Status",
+        "image": "https://i.ibb.co.com/fD30j75/Bloger-her-blog-status.png"
+      }
+    ],
+    "keyfeature": [
+      "Blog creation and management",
+      "User engagement via comments and likes",
+      "Admin dashboard for content oversight",
+      "Responsive and optimized UI"
+    ],
+    "starDate": "25 Oct, 2024",
+    "endDate": "7 Nov, 2024",
+    "liveLink": "https://blog-editorr.web.app/",
+    "github_link": "https://github.com/programmer-kabir/BLOG_EDITOR"
+  },
+  {
+    "id": 3,
+    "title": "Job Swift : ATS Application",
+    "category": "Human Resources",
+    "technology": [
+      { "icon": "SiJavascript", "name": "Javascript", "brandColor": "#FFFF00" },
+      { "icon": "SiReact", "name": "React.js", "brandColor": "#61DBFB" },
+      {
+        "icon": "SiTailwindcss",
+        "name": "Tailwind CSS",
+        "brandColor": "#38B2AC"
+      },
+      { "icon": "SiFirebase", "name": "Firebase", "brandColor": "#FFCB2B" },
+      { "icon": "SiExpress", "name": "Express.js", "brandColor": "#61DAFB" },
+      { "icon": "SiNodedotjs", "name": "Node.js", "brandColor": "#339933" },
+      { "icon": "SiMongodb", "name": "MongoDB", "brandColor": "#47A248" },
+      { "icon": "BiLogoRedux", "name": "Redux", "brandColor": "#764abc" },
+      { "icon": "SiVercel", "name": "Vercel", "brandColor": "#fff" }
+    ],
+    "overview": "Job Swift is an advanced Applicant Tracking System (ATS) application developed with React, Tailwind CSS, MongoDB, and React PDF, featuring scheduling, applicant tracking, and comprehensive management functionalities to streamline the recruitment process.",
+    "details": "Job Swift is a robust ATS that supports the recruitment process by simplifying the applicant tracking, interview scheduling, and documentation needs of HR departments. With features like automated communication and applicant tracking, HR professionals can streamline workflows and reduce the time spent on administrative tasks. The application leverages React for its UI, Tailwind CSS for design consistency, and MongoDB for secure data storage. Future features will include AI-driven candidate matching, helping organizations find the best-fit candidates more efficiently.",
+    "mainImage": "https://i.ibb.co.com/Wx3x86n/screencapture-job-swift-git-masum-developermasum-vercel-app-2024-11-24-02-48-46.png",
+    "othersImage": [
+      {
+        "name": "JobSwift",
+        "image": "https://i.ibb.co/s9jsQ5Q/jobswift.png"
+      },
+      {
+        "name": "Stages",
+        "image": "https://i.ibb.co/TqBCJB1/stages.png"
+      },
+      {
+        "name": "Jobs",
+        "image": "https://i.ibb.co/7tkrt91/Jobs.png"
+      },
+      {
+        "name": "Application Success",
+        "image": "https://i.ibb.co/pP49Hvx/success-Apply.png"
+      },
+      {
+        "name": "Form Portal",
+        "image": "https://i.ibb.co.com/hsJSc5k/formFi.png"
+      },
+      {
+        "name": "Shared Portal",
+        "image": "https://i.ibb.co/zfCMssD/shared-Portal.png"
+      },
+      {
+        "name": "Admin Dashboard",
+        "image": "https://i.ibb.co/MGWR4wq/admin-dash.png"
+      },
+      {
+        "name": "Hiring Page",
+        "image": "https://i.ibb.co/p2DNhZR/hiring.png"
+      }
+    ],
+    "keyfeature": [
+      "Application tracking and reporting",
+      "Interview scheduling and reminders",
+      "User roles and permissions for HR and recruiters",
+      "Automated document generation"
+    ],
+    "starDate": "25 Oct, 2024",
+    "endDate": "12 May, 2023",
+    "liveLink": "https://job-swift-git-masum-developermasum.vercel.app/",
+    "github_link": "https://github.com/developerMasum/Job-Swift"
+  },
+  {
+    "id": 5,
+    "title": "CV Builder",
+    "category": "Web Application",
+    "technology": [
+      { "icon": "SiJavascript", "name": "JavaScript", "brandColor": "#F7DF1E" },
+      { "icon": "SiReact", "name": "React.js", "brandColor": "#61DAFB" },
+      {
+        "icon": "SiTailwindcss",
+        "name": "Tailwind CSS",
+        "brandColor": "#38B2AC"
+      },
+      { "icon": "SiFirebase", "name": "Firebase", "brandColor": "#FFCB2B" },
+      { "icon": "SiNodedotjs", "name": "Node.js", "brandColor": "#339933" },
+      { "icon": "SiMongodb", "name": "MongoDB", "brandColor": "#47A248" },
+      { "icon": "SiVercel", "name": "Vercel", "brandColor": "#FFFFFF" }
+    ],
+    "overview": "CV Builder is a web-based application that helps users create professional resumes effortlessly. With a modern UI, customizable sections, and export functionality, users can build job-ready CVs in minutes.",
+    "details": "The platform allows users to input their personal details, education, skills, and work experience in an easy-to-use form. Users can preview their CV in real-time, download it as PDF, and manage multiple templates. Authentication ensures that users can securely save and manage their resume data.",
+    "mainImage": "https://i.ibb.co.com/Lsd5SWz/screencapture-cv-builder122-web-app-2025-08-24-09-28-49.png",
+    "othersImage": [
+      {
+        "name": "Home Page",
+        "image": "https://i.ibb.co.com/Lsd5SWz/screencapture-cv-builder122-web-app-2025-08-24-09-28-49.png"
+      },
+      {
+        "name": "CV Form",
+        "image": "https://i.ibb.co.com/yn86Shw0/personal-information.png"
+      },
+      {
+        "name": "Preview Section",
+        "image": "https://i.ibb.co.com/j9f63pk9/cv.png"
+      }
+    ],
+    "keyfeature": [
+      "User authentication and profile management",
+      "Real-time CV preview",
+      "Multiple template support",
+      "PDF download functionality",
+      "Responsive and mobile-friendly design",
+      "Save and edit resume anytime",
+      "Modern and clean UI using Tailwind CSS"
+    ],
+    "starDate": "10 Feb, 2025",
+    "endDate": "24 Feb, 2025",
+    "liveLink": "https://cv-builder.netlify.app/",
+    "github_link": "https://github.com/programmer-kabir/Cv-Builder"
+  },
+
+  {
+    "id": 5,
+    "title": "Shoppin",
+    "category": "E-commerce",
+    "technology": [
+      { "icon": "SiJavascript", "name": "Javascript", "brandColor": "#FFFF00" },
+      {
+        "icon": "SiTailwindcss",
+        "name": "Tailwind CSS",
+        "brandColor": "#38B2AC"
+      },
+      { "icon": "SiFirebase", "name": "Firebase", "brandColor": "#FFCB2B" },
+      { "icon": "SiExpress", "name": "Express.js", "brandColor": "#61DAFB" },
+      { "icon": "SiNodedotjs", "name": "Node.js", "brandColor": "#339933" },
+      { "icon": "SiMongodb", "name": "MongoDB", "brandColor": "#47A248" },
+      { "icon": "BiLogoRedux", "name": "Redux", "brandColor": "#764abc" },
+      { "icon": "SiVercel", "name": "Vercel", "brandColor": "#fff" }
+    ],
+    "overview": "Shoppin is a user-friendly e-commerce website that helps users browse and purchase products effortlessly. Featured and discounted products are highlighted to allow users to quickly identify the best deals, while related products are displayed on each product page for an enhanced shopping experience.",
+    "details": "The platform offers secure authentication via Google and Email-Password login. Users can explore featured and discounted products, view related items, and complete purchases securely. Built with React, React Router, JWT, Node.js, Express, MongoDB, and Firebase, Shoppin ensures a smooth, responsive, and safe e-commerce experience.",
+
+    "mainImage": "https://i.ibb.co.com/f3ZtCs7/screencapture-shoppin-vercel-app-2025-08-24-05-45-56.png",
+    "othersImage": [
+      {
+        "name": "Shop Page",
+        "image": "https://i.ibb.co.com/3n1GRYc/shop-page.png"
+      },
+      {
+        "name": "Wishlist Page",
+        "image": "https://i.ibb.co.com/SD3LF1Xy/5272412d-591e-4b88-826c-4f5e8caecfcf.png"
+      },
+      {
+        "name": "Users Add to Card Data",
+        "image": "https://i.ibb.co.com/nq7djvqY/User-Cart.png"
+      },
+      {
+        "name": "Payment Page",
+        "image": "https://i.ibb.co.com/jP6Qvh64/Payment-Page.png"
+      },
+      {
+        "name": "User Dashboard",
+        "image": "https://i.ibb.co.com/mr6xbSgN/User-Dashboard.png"
+      }
+    ],
+    "keyfeature": [
+      "User authentication via Google and Email-Password",
+      "Featured and discounted product display for easy selection",
+      "Related products shown on product view page",
+      "Secure and efficient transaction handling",
+      "Role-based access control for admin and users",
+      "Responsive and mobile-friendly UI",
+      "Efficient product filtering and search functionality",
+      "Real-time updates for orders and product availability"
+    ],
+    "starDate": "19 Sep, 2024",
+    "endDate": "23 Oct, 2024",
+    "liveLink": "https://shoppin.vercel.app/",
+    "github_link": "https://github.com/programmer-kabir/Shoppin"
+  }
+]

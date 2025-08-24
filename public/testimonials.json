@@ -1,0 +1,44 @@
+[
+  {
+    "_id": "1",
+    "name": "Olivia Carter",
+    "role": "CEO, TechWave Solutions",
+    "image": "https://iili.io/3qGYzwx.jpg",
+    "review": "Kabir is an exceptionally talented developer with a deep understanding of both front-end and back-end technologies. His ability to create seamless user experiences is truly commendable. Highly recommended!"
+  },
+  {
+    "_id": "2",
+    "name": "Emma Thompson",
+    "role": "Senior UI/UX Designer, Creative Labs",
+    "image": "https://iili.io/3qGYxuj.jpg",
+    "review": "Working with Kabir was an absolute pleasure! His eye for design and keen understanding of user experience resulted in a beautifully crafted product. A true professional in the industry."
+  },
+  {
+    "_id": "3",
+    "name": "Sophia Ramirez",
+    "role": "Product Manager, InnovateX",
+    "image": "https://iili.io/3qGYBae.jpg",
+    "review": "Kabir delivered outstanding results for our project. His ability to turn ideas into functional, well-optimized solutions was beyond impressive. Highly skilled and dedicated to excellence!"
+  },
+  {
+    "_id": "4",
+    "name": "Liam Anderson",
+    "role": "Lead Developer, CodeCrafters",
+    "image": "https://iili.io/3qGYC8u.jpg",
+    "review": "I've collaborated with many developers, but Kabir stands out for his efficiency and problem-solving skills. He consistently delivers high-quality code and ensures best practices are followed."
+  },
+  {
+    "_id": "5",
+    "name": "Ava Mitchell",
+    "role": "Freelance Digital Marketer",
+    "image": "https://iili.io/3qGYl9a.jpg",
+    "review": "Kabir designed an incredible website for my brand! The layout, speed, and responsiveness exceeded my expectations. If you're looking for a top-tier web developer, he's the one!"
+  },
+  {
+    "_id": "6",
+    "name": "Ethan Brown",
+    "role": "CTO, NexGen Software",
+    "image": "https://iili.io/3qGY7F1.jpg",
+    "review": "Kabir is a highly skilled developer who excels at creating efficient and scalable web applications. His problem-solving approach and technical expertise make him a valuable asset to any team."
+  }
+]
