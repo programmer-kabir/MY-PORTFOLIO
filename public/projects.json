@@ -1,70 +1,5 @@
 [
-  {
-    "id": 1,
-    "title": "Trends Shop",
-    "category": "E-commerce",
-    "technology": [
-      { "icon": "SiJavascript", "name": "Javascript", "brandColor": "#FFFF00" },
-      { "icon": "SiReact", "name": "React.js", "brandColor": "#61DBFB" },
-      {
-        "icon": "SiTailwindcss",
-        "name": "Tailwind CSS",
-        "brandColor": "#38B2AC"
-      },
-      { "icon": "SiFirebase", "name": "Firebase", "brandColor": "#FFCB2B" },
-      { "icon": "SiExpress", "name": "Express.js", "brandColor": "#61DAFB" },
-      { "icon": "SiNodedotjs", "name": "Node.js", "brandColor": "#339933" },
-      { "icon": "SiMongodb", "name": "MongoDB", "brandColor": "#47A248" },
-      { "icon": "SiAntdesign", "name": "Ant Design", "brandColor": "#0170FE" },
-
-      { "icon": "BiLogoRedux", "name": "Redux", "brandColor": "#764abc" },
-      { "icon": "SiAntdesign", "name": "Ant Design", "brandColor": "#0170FE" },
-      { "icon": "SiVercel", "name": "Vercel", "brandColor": "#fff" }
-    ],
-    "overview": "Discover an elegant shoe e-commerce platform built with React, Ant Design, MongoDB, Mongoose, and Redux, offering a flawless shopping journey alongside robust dashboard management and secure payment features.",
-    "details": "Trends Shop is a premium shoe eCommerce platform crafted to deliver a contemporary shopping experience. The site features a sleek and responsive user interface powered by React and Ant Design, highlighting an extensive collection of leather products. Its MongoDB-based backend ensures seamless management of customer orders, product inventories, and payment details. Administrators benefit from a powerful dashboard for overseeing inventory and orders, while customers enjoy conveniences like secure payments, order tracking, and an effortless shopping experience. Upcoming updates will include AI-driven product recommendations and advanced search functionality to elevate the user experience further.",
-    "mainImage": "https://i.ibb.co.com/Cv21hJX/screencapture-trends-shop-5f3a7-web-app-2024-11-23-11-39-03.png",
-    "othersImage": [
-      {
-        "name": "Home Page",
-        "image": "https://i.ibb.co.com/k6LWftN/NavMenu.png"
-      },
-      {
-        "name": "Filter Page",
-        "image": "https://i.ibb.co.com/gMHkTDC/Shoe.png"
-      },
-      {
-        "name": "Admin Dashboard",
-        "image": "https://i.ibb.co.com/Lv3CBKh/Admin-Sales-Pages.png"
-      },
-      {
-        "name": "Coupon Code",
-        "image": "https://i.ibb.co.com/NstYTnp/Coupon-Code-Manges.png"
-      },
-      {
-        "name": "Users Full Details",
-        "image": "https://i.ibb.co.com/55jZNvh/User-Data.png"
-      },
-      {
-        "name": "Users Order Management",
-        "image": "https://i.ibb.co.com/Bc2kc3H/User-Order-Mange-Ment.png"
-      },
-      {
-        "name": "Users Add to Card Data",
-        "image": "https://i.ibb.co.com/YX0pLwJ/Product-Add-Data.png"
-      }
-    ],
-    "keyfeature": [
-      "Product catalog and filtering",
-      "User authentication and order tracking",
-      "Payment gateway integration",
-      "Responsive and optimized UI"
-    ],
-    "starDate": "25 Oct, 2024",
-    "endDate": "7 Nov, 2024",
-    "liveLink": "https://trends-shop-5f3a7.web.app/",
-    "github_link": "https://github.com/programmer-kabir/Trends-Shop"
-  },
+  
   {
     "id": 2,
     "title": "Blogs Editor",
@@ -124,6 +59,7 @@
     "liveLink": "https://blog-editorr.web.app/",
     "github_link": "https://github.com/programmer-kabir/BLOG_EDITOR"
   },
+
   {
     "id": 3,
     "title": "Job Swift : ATS Application",
@@ -239,9 +175,74 @@
     "liveLink": "https://cv-builder.netlify.app/",
     "github_link": "https://github.com/programmer-kabir/Cv-Builder"
   },
+{
+    "id": 1,
+    "title": "Trends Shop",
+    "category": "E-commerce",
+    "technology": [
+      { "icon": "SiJavascript", "name": "Javascript", "brandColor": "#FFFF00" },
+      { "icon": "SiReact", "name": "React.js", "brandColor": "#61DBFB" },
+      {
+        "icon": "SiTailwindcss",
+        "name": "Tailwind CSS",
+        "brandColor": "#38B2AC"
+      },
+      { "icon": "SiFirebase", "name": "Firebase", "brandColor": "#FFCB2B" },
+      { "icon": "SiExpress", "name": "Express.js", "brandColor": "#61DAFB" },
+      { "icon": "SiNodedotjs", "name": "Node.js", "brandColor": "#339933" },
+      { "icon": "SiMongodb", "name": "MongoDB", "brandColor": "#47A248" },
+      { "icon": "SiAntdesign", "name": "Ant Design", "brandColor": "#0170FE" },
 
+      { "icon": "BiLogoRedux", "name": "Redux", "brandColor": "#764abc" },
+      { "icon": "SiAntdesign", "name": "Ant Design", "brandColor": "#0170FE" },
+      { "icon": "SiVercel", "name": "Vercel", "brandColor": "#fff" }
+    ],
+    "overview": "Discover an elegant shoe e-commerce platform built with React, Ant Design, MongoDB, Mongoose, and Redux, offering a flawless shopping journey alongside robust dashboard management and secure payment features.",
+    "details": "Trends Shop is a premium shoe eCommerce platform crafted to deliver a contemporary shopping experience. The site features a sleek and responsive user interface powered by React and Ant Design, highlighting an extensive collection of leather products. Its MongoDB-based backend ensures seamless management of customer orders, product inventories, and payment details. Administrators benefit from a powerful dashboard for overseeing inventory and orders, while customers enjoy conveniences like secure payments, order tracking, and an effortless shopping experience. Upcoming updates will include AI-driven product recommendations and advanced search functionality to elevate the user experience further.",
+    "mainImage": "https://i.ibb.co.com/Cv21hJX/screencapture-trends-shop-5f3a7-web-app-2024-11-23-11-39-03.png",
+    "othersImage": [
+      {
+        "name": "Home Page",
+        "image": "https://i.ibb.co.com/k6LWftN/NavMenu.png"
+      },
+      {
+        "name": "Filter Page",
+        "image": "https://i.ibb.co.com/gMHkTDC/Shoe.png"
+      },
+      {
+        "name": "Admin Dashboard",
+        "image": "https://i.ibb.co.com/Lv3CBKh/Admin-Sales-Pages.png"
+      },
+      {
+        "name": "Coupon Code",
+        "image": "https://i.ibb.co.com/NstYTnp/Coupon-Code-Manges.png"
+      },
+      {
+        "name": "Users Full Details",
+        "image": "https://i.ibb.co.com/55jZNvh/User-Data.png"
+      },
+      {
+        "name": "Users Order Management",
+        "image": "https://i.ibb.co.com/Bc2kc3H/User-Order-Mange-Ment.png"
+      },
+      {
+        "name": "Users Add to Card Data",
+        "image": "https://i.ibb.co.com/YX0pLwJ/Product-Add-Data.png"
+      }
+    ],
+    "keyfeature": [
+      "Product catalog and filtering",
+      "User authentication and order tracking",
+      "Payment gateway integration",
+      "Responsive and optimized UI"
+    ],
+    "starDate": "25 Oct, 2024",
+    "endDate": "7 Nov, 2024",
+    "liveLink": "https://trends-shop-5f3a7.web.app/",
+    "github_link": "https://github.com/programmer-kabir/Trends-Shop"
+  },
   {
-    "id": 5,
+    "id": 10,
     "title": "Shoppin",
     "category": "E-commerce",
     "technology": [
