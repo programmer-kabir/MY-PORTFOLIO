@@ -1,7 +1,6 @@
 [
-  
   {
-    "id": 2,
+    "id": 1,
     "title": "Blogs Editor",
     "category": "Social Media",
     "technology": [
@@ -61,7 +60,7 @@
   },
 
   {
-    "id": 3,
+    "id": 2,
     "title": "Job Swift : ATS Application",
     "category": "Human Resources",
     "technology": [
@@ -128,7 +127,7 @@
     "github_link": "https://github.com/developerMasum/Job-Swift"
   },
   {
-    "id": 5,
+    "id": 3,
     "title": "CV Builder",
     "category": "Web Application",
     "technology": [
@@ -175,8 +174,8 @@
     "liveLink": "https://cv-builder.netlify.app/",
     "github_link": "https://github.com/programmer-kabir/Cv-Builder"
   },
-{
-    "id": 1,
+  {
+    "id": 4,
     "title": "Trends Shop",
     "category": "E-commerce",
     "technology": [
@@ -242,7 +241,7 @@
     "github_link": "https://github.com/programmer-kabir/Trends-Shop"
   },
   {
-    "id": 10,
+    "id": 5,
     "title": "Shoppin",
     "category": "E-commerce",
     "technology": [
@@ -264,6 +263,10 @@
 
     "mainImage": "https://i.ibb.co.com/f3ZtCs7/screencapture-shoppin-vercel-app-2025-08-24-05-45-56.png",
     "othersImage": [
+      {
+        "name": "Home Page",
+        "image": "https://iili.io/K3FUfs9.png"
+      },
       {
         "name": "Shop Page",
         "image": "https://i.ibb.co.com/3n1GRYc/shop-page.png"
@@ -299,5 +302,14 @@
     "endDate": "23 Oct, 2024",
     "liveLink": "https://shoppin.vercel.app/",
     "github_link": "https://github.com/programmer-kabir/Shoppin"
+  },
+  {
+    "id": 11,
+    "title": "Tidy",
+    "category": "templates",
+    "templateName": "HTML & CSS",
+    "image": "https://iili.io/K3N79Se.png",
+    "liveLink": "https://tranquil-alfajores-4022cf.netlify.app/",
+    "github_link": "https://github.com/programmer-kabir/Tidy"
   }
 ]

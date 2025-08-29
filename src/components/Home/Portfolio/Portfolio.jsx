@@ -1,181 +1,134 @@
 import { useEffect, useState } from "react";
 import Content from "../../Content";
 import Title from "../../Share/Title";
-import './Portfolio.css'
-import { FaRegEye } from "react-icons/fa";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Tooltip as ReactTooltip } from "react-tooltip";
-import { IoIosLink } from "react-icons/io";
+import "./Portfolio.css";
+import { FaEye } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa6";
 import "react-tooltip/dist/react-tooltip.css";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/effect-cards";
-import { EffectCards, Pagination } from "swiper/modules";
-import {
-  SiAntdesign,
-  SiExpress,
-  SiFirebase,
-  SiGithub,
-  SiJavascript,
-  SiMongodb,
-  SiNodedotjs,
-  SiReact,
-  SiTailwindcss,
-  SiVercel,
-} from "react-icons/si";
-import { BiLogoRedux } from "react-icons/bi";
+import { FaExclamationCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-
 const Portfolio = () => {
-    const [projects, setProjects] = useState([]);
-    useEffect(() => {
-      const fetchProjects = async () => {
-        try {
-          const response = await fetch("/projects.json");
-          const data = await response.json();
-          setProjects(data);
-        } catch (error) {
-          console.error("Error fetching project data:", error);
-        }
-      };
-  
-      fetchProjects();
-    }, []);
-  
-  const iconMapping = {
-    SiJavascript,
-    SiReact,
-    SiTailwindcss,
-    SiFirebase,
-    SiExpress,
-    SiNodedotjs,
-    SiMongodb,
-    BiLogoRedux,
-    SiAntdesign,
-    SiVercel,
-  };
+  const [projects, setProjects] = useState([]);
+  const [activeTab, setActiveTab] = useState(" ");
+
+  const projectsToShow =
+    activeTab === "mern"
+      ? projects.filter((p) => p?.category !== "templates") // MERN projects
+      : activeTab === "templates"
+      ? projects.filter((p) => p?.category === "templates") // Templates projects
+      : projects;
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const response = await fetch("/projects.json");
+        const data = await response.json();
+        setProjects(data);
+      } catch (error) {
+        console.error("Error fetching project data:", error);
+      }
+    };
+
+    fetchProjects();
+  }, []);
+
   return (
     <section id="/portfolio">
       <Content>
-      <Title title={"Portfolio"} subTitle={"My Portfolio"} />
-     
-      <div className="mt-6 grid gap-4">
-      <section id="projects" className="pt-10 overflow-hidden">
-        <div data-aos="fade-down ">
-         
-          {/*  */}
-          <Swiper
-            effect={"cards"}
-            pagination={{
-              clickable: true,
-            }}
-            grabCursor={true}
-            modules={[EffectCards, Pagination]}
-            className="mySwiper mt-5"
-          >
-            {projects.map((project) => (
-              <SwiperSlide className="" key={project.id}>
-                <section className="md:flex gap-5 xl:max-w-4xl 2xl:max-w-6xl rounded-xl mx-auto bg-[#242F48] p-4 py-3  md:p-7">
-                  <div className="md:w-1/2 ">
-                    <div className="flex items-center justify-between gap-5">
-                      <h2 className="md:text-3xl text-xl font-semibold text-white">
-                        {project.title}
-                      </h2>
-                      <Link to={`/projects/details/${project.id}`}>
-  <button className="px-5 py-2 text-[14px] bg-[#009E66] text-white  font-medium cursor-pointer">Details</button>
-</Link>
-                    </div>
-                    {/* overview */}
-                    <h4 className="pt-7 md:font-medium font-normal text-justify text-white text-lg">
-                      {project?.overview}
-                    </h4>
-                    {/* Technology */}
-                    <div className="pt-7">
-                      <h2 className="text-2xl font-semibold text-white">
-                        Technologies
-                      </h2>
-                      <div className="grid grid-cols-5 md:grid-cols-7 gap-4 pt-5">
-                        {project.technology.map((technologys, index) => {
-                          const IconComponent = iconMapping[technologys.icon]; // Find the correct icon component
-                          return (
-                            <div key={index}>
-                              <div
-                                style={{
-                                  color: technologys?.brandColor || "#fff",
-                                }}
-                                className="md:text-4xl text-3xl"
-                              >
-                                <div>
-                                  <a
-                                    data-tooltip-id="my-tooltip"
-                                    data-tooltip-content={technologys?.name}
-                                  >
-                                    {IconComponent && <IconComponent />}{" "}
-                                    {/* Render the icon component */}
-                                  </a>
-                                  <ReactTooltip
-                                    id="my-tooltip"
-                                    style={{
-                                      fontSize: "12px",
-                                      padding: "5px 10px",
-                                    }}
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          );
-                        })}
-                      </div>
+        <Title title={"Portfolio"} subTitle={"My Portfolio"} />
 
-                      <div className="flex items-center justify-center gap-4 pt-7 pb-5 md:mb-0">
-                        <a
-                          href={project.liveLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <button className="flex  items-center  gap-2 text-black bg-[#009E66] hover:bg-transparent  px-3 md:py-2.5 py-2 rounded-md border-2 border-[#009E66] transition-colors duration-300  hover:text-white cursor-pointer">
-  <IoIosLink size={25} />
-  <span className="md:text-xl text-xs font-semibold">Live Link</span>
-</button>
+        <div className="mt-6 grid gap-4">
+          <section id="projects" className="pt-10 overflow-hidden">
+            <div className="flex justify-center gap-4 mb-5">
+              <ul className="flex justify-center gap-4 mb-10">
+                {[
+                  "Featured Projects (MERN)",
+                  "Templates & Mini Projects (UI/JS)",
+                ].map((tab, index) => (
+                  <li key={index}>
+                    <button
+                      onClick={() =>
+                        setActiveTab(index === 0 ? "mern" : "templates")
+                      }
+                      className={`inline-block md:px-5 px-2 py-1 md:py-3 text-sm text-white rounded-sm border border-[#009E66] shadow transition ${
+                        activeTab === (index === 0 ? "mern" : "templates")
+                          ? "bg-[#009E66]"
+                          : ""
+                      }`}
+                    >
+                      {tab}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-                        </a>
-                        <a
-                          href={project.github_link}
-                          target="_blank"
-                          rel="noopener noreferrer"
+            <div
+              data-aos="fade-down "
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+            >
+              {projectsToShow?.map((project) => (
+                <div className="" key={project?.id}>
+                  <section className="relative group">
+                    {/* Image */}
+                    <img
+                      src={
+                        project?.othersImage?.length > 0
+                          ? project.othersImage[0].image
+                          : project?.image || project?.mainImage
+                      }
+                      alt={project?.title}
+                      className="w-full h-52 object-cover rounded-lg"
+                    />
+
+                    {/* Overlay */}
+                    
+                      <div className="absolute inset-0 bg-black/70 rounded-lg flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <Link
+                          to={project?.category !== "templates" && `/projects/details/${project?.id}`}
+                          className="absolute top-2 bg-slate-900 text-white text-sm font-medium uppercase px-2 py-1 rounded flex items-center gap-2 
+                            transform -translate-y-2 opacity-0 
+                            group-hover:translate-y-0 group-hover:opacity-100 
+                            transition-all duration-200 ease-in-out"
                         >
-                          <button className="flex items-center  gap-2 text-white hover:bg-[#009E66] bg-transparent  px-3 md:py-2.5 py-2 rounded-md border-2 border-[#009E66] transition-colors duration-300  hover:text-black cursor-pointer">
-                            <SiGithub size={25} />
-                            <span className="md:text-xl  text-xs font-semibold">
-                              Github Repository
-                            </span>
-                          </button>
-                        </a>
+                          <FaExclamationCircle color="white" />
+                          <span>{project?.category === "templates"?project?.templateName:"Details"}</span>
+                        </Link>
+                        <div className="absolute px-2 justify-between w-full bottom-2 flex items-center">
+                          {/* GitHub Button */}
+                          <Link to={project?.github_link}>
+                            <button
+                              className="bg-slate-900 text-white text-sm font-medium uppercase p-2 rounded-full flex items-center gap-2 
+                                transform -translate-x-4 opacity-0
+                                group-hover:translate-x-0 group-hover:opacity-100
+                                transition-all duration-200 ease-in-out"
+                            >
+                              <FaGithub color="white" />
+                            </button>
+                          </Link>
+
+                          {/* Live Button */}
+                          <Link to={project?.liveLink}>
+                            <button
+                              className="bg-slate-900 text-white text-sm font-medium uppercase p-2 rounded-full flex items-center gap-2 
+                                transform translate-x-4 opacity-0
+                                group-hover:translate-x-0 group-hover:opacity-100
+                                transition-all duration-200 ease-in-out"
+                            >
+                              <FaEye color="white" />
+                            </button>
+                          </Link>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                  <div className="md:w-1/2">
-                    <div className="containerr md:pl-10">
-                      <div className="box box-1 rounded-lg overflow-hidden ">
-                        <img
-                          src={project.mainImage}
-                          className="box-img rounded-lg"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </section>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+                    
+                  </section>
+                </div>
+              ))}
+            </div>
+          </section>
         </div>
-      </section>
-       
-      </div>
-    </Content>
+      </Content>
     </section>
   );
 };
