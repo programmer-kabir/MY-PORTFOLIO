@@ -311,5 +311,14 @@
     "image": "https://iili.io/K3N79Se.png",
     "liveLink": "https://tranquil-alfajores-4022cf.netlify.app/",
     "github_link": "https://github.com/programmer-kabir/Tidy"
+  },
+  {
+    "id": 11,
+    "title": "LensCraft",
+    "category": "templates",
+    "templateName": "Tailwind CSS",
+    "image": "https://iili.io/KKHoLS1.png",
+    "liveLink": "https://lenscraft-landingpage.netlify.app/",
+    "github_link": "https://github.com/programmer-kabir/LensCraft-LandingPage"
   }
 ]
