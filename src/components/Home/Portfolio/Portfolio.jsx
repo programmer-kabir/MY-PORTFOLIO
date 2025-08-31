@@ -7,11 +7,12 @@ import { FaGithub } from "react-icons/fa6";
 import "react-tooltip/dist/react-tooltip.css";
 import { FaExclamationCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
-
+import { IoIosArrowBack } from "react-icons/io";
 const Portfolio = () => {
   const [projects, setProjects] = useState([]);
   const [activeTab, setActiveTab] = useState(" ");
-
+  const [currentPage, setCurrentPage] = useState(1);
+  const projectsPerPage = 6;
   const projectsToShow =
     activeTab === "mern"
       ? projects.filter((p) => p?.category !== "templates") // MERN projects
@@ -32,7 +33,13 @@ const Portfolio = () => {
 
     fetchProjects();
   }, []);
-
+  const indexOfLast = currentPage * projectsPerPage;
+  const indexOfFirst = indexOfLast - projectsPerPage;
+  const currentProjects = projectsToShow.slice(indexOfFirst, indexOfLast);
+  const totalPages = Math.ceil(projectsToShow.length / projectsPerPage);
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [activeTab]);
   return (
     <section id="/portfolio">
       <Content>
@@ -68,7 +75,7 @@ const Portfolio = () => {
               data-aos="fade-down "
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
             >
-              {projectsToShow?.map((project) => (
+              {currentProjects?.map((project) => (
                 <div className="" key={project?.id}>
                   <section className="relative group">
                     {/* Image */}
@@ -83,48 +90,97 @@ const Portfolio = () => {
                     />
 
                     {/* Overlay */}
-                    
-                      <div className="absolute inset-0 bg-black/70 rounded-lg flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <Link
-                          to={project?.category !== "templates" && `/projects/details/${project?.id}`}
-                          className="absolute top-2 bg-slate-900 text-white text-sm font-medium uppercase px-2 py-1 rounded flex items-center gap-2 
+
+                    <div className="absolute inset-0 bg-black/70 rounded-lg flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <Link
+                        to={
+                          project?.category !== "templates" &&
+                          `/projects/details/${project?.id}`
+                        }
+                        className="absolute top-2 bg-slate-900 text-white text-sm font-medium uppercase px-2 py-1 rounded flex items-center gap-2 
                             transform -translate-y-2 opacity-0 
                             group-hover:translate-y-0 group-hover:opacity-100 
                             transition-all duration-200 ease-in-out"
-                        >
-                          <FaExclamationCircle color="white" />
-                          <span>{project?.category === "templates"?project?.templateName:"Details"}</span>
-                        </Link>
-                        <div className="absolute px-2 justify-between w-full bottom-2 flex items-center">
-                          {/* GitHub Button */}
-                          <Link to={project?.github_link}>
-                            <button
-                              className="bg-slate-900 text-white text-sm font-medium uppercase p-2 rounded-full flex items-center gap-2 
+                      >
+                        <FaExclamationCircle color="white" />
+                        <span>
+                          {project?.category === "templates"
+                            ? project?.templateName
+                            : "Details"}
+                        </span>
+                      </Link>
+                      <div className="absolute px-2 justify-between w-full bottom-2 flex items-center">
+                        {/* GitHub Button */}
+                        <Link to={project?.github_link}>
+                          <button
+                            className="bg-slate-900 text-white text-sm font-medium uppercase p-2 rounded-full flex items-center gap-2 
                                 transform -translate-x-4 opacity-0
                                 group-hover:translate-x-0 group-hover:opacity-100
                                 transition-all duration-200 ease-in-out"
-                            >
-                              <FaGithub color="white" />
-                            </button>
-                          </Link>
+                          >
+                            <FaGithub color="white" />
+                          </button>
+                        </Link>
 
-                          {/* Live Button */}
-                          <Link to={project?.liveLink}>
-                            <button
-                              className="bg-slate-900 text-white text-sm font-medium uppercase p-2 rounded-full flex items-center gap-2 
+                        {/* Live Button */}
+                        <Link to={project?.liveLink}>
+                          <button
+                            className="bg-slate-900 text-white text-sm font-medium uppercase p-2 rounded-full flex items-center gap-2 
                                 transform translate-x-4 opacity-0
                                 group-hover:translate-x-0 group-hover:opacity-100
                                 transition-all duration-200 ease-in-out"
-                            >
-                              <FaEye color="white" />
-                            </button>
-                          </Link>
-                        </div>
+                          >
+                            <FaEye color="white" />
+                          </button>
+                        </Link>
                       </div>
-                    
+                    </div>
                   </section>
                 </div>
               ))}
+            </div>
+            <div className="flex justify-center mt-8 gap-2">
+              <button
+                onClick={() =>
+                  setCurrentPage((prev) => (prev > 1 ? prev - 1 : prev))
+                }
+                disabled={currentPage === 1}
+                className={`p-2 rounded ${
+                  currentPage === 1
+                    ? "bg-gray-800 cursor-not-allowed text-white"
+                    : "bg-gray-900 text-white"
+                }`}
+              >
+                <IoIosArrowBack />
+              </button>
+              {Array.from({ length: totalPages }, (_, i) => (
+                <button
+                  key={i + 1}
+                  onClick={() => setCurrentPage(i + 1)}
+                  className={`px-3 py-1 ${
+                    currentPage === i + 1
+                      ? "bg-slate-900  text-[#009E66]"
+                      : "bg-slate-900  text-white"
+                  }`}
+                >
+                  {i + 1}
+                </button>
+              ))}
+              <button
+                onClick={() =>
+                  setCurrentPage((prev) =>
+                    prev < totalPages ? prev + 1 : prev
+                  )
+                }
+                disabled={currentPage === totalPages}
+                className={`p-2 rounded ${
+                  currentPage === totalPages
+                    ? "bg-gray-800 cursor-not-allowed text-white"
+                    : "bg-slate-900 text-white"
+                }`}
+              >
+                <IoIosArrowBack className="rotate-180" />
+              </button>
             </div>
           </section>
         </div>

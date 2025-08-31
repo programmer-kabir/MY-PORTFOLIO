@@ -313,12 +313,21 @@
     "github_link": "https://github.com/programmer-kabir/Tidy"
   },
   {
-    "id": 11,
+    "id": 12,
     "title": "LensCraft",
     "category": "templates",
     "templateName": "Tailwind CSS",
     "image": "https://iili.io/KKHoLS1.png",
     "liveLink": "https://lenscraft-landingpage.netlify.app/",
     "github_link": "https://github.com/programmer-kabir/LensCraft-LandingPage"
+  },
+  {
+    "id": 13,
+    "title": "Admin Dashboard",
+    "category": "templates",
+    "templateName": "Tailwind CSS",
+    "image": "https://iili.io/KKVpJzN.png",
+    "liveLink": "https://fastidious-tulumba-14c085.netlify.app/",
+    "github_link": "https://github.com/programmer-kabir/Admin-Dashboard"
   }
 ]
